@@ -7,7 +7,7 @@ wallThick = 2; // thickness of box walls
 
 /* [Compartments] */
 xCompartments = 3; // number of columns
-yCompartments = 2; // number of rows
+yCompartments = 3; // number of rows
 dividerThick = 1; // thickness of divider walls
 
 /* [Lid] */

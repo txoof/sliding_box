@@ -45,6 +45,14 @@ Optional:
 
 Lesson 1: Introduction to the Customizer
 =========
+The Thingiverse offers users the ability to display their models and designs through a sort of gallery.  The gallery can contain images, pdfs, zipped files STL models, OpenSCAD soure files and many other file types. 
+
+Most models on the Thingiverse are STL files. These are sort of like loaves of bread; they have been made to a recipe with a program like Rhino, Sketchup, Blender or OpenSCAD. They are more-or-less immutable and cannot be changed without a special STL editor.
+
+OpenSCAD files are more of a recipe than a finished product. The recipe can be tweaked and modified to suit a particular need. When OpenSCAD is instructed to 'render' a design, it runs the recipe and bakes the finished product.  Some OpenSCAD designs are more tweakable than others depending on how they are created.
+
+Explore this design and see what can be manipulated. Think about this might be useful.
+
 1. Open [this thing at Thingiverse.com](http://www.thingiverse.com/thing:1201466/) and launch the customizer
   - Note: You will need a free Thingiverse account.  If you do not have/want a thingiverse account please skip to Lesson 2
 2. Play around with the customizable elements.  Try to make a box that has the following dimensions:
@@ -54,14 +62,200 @@ Lesson 1: Introduction to the Customizer
   - yCompartments: 1 
 3. Create an STL and download it later by clicking on the "Create Thing" link.
 
-Questions
+Questions:
 ---------
 * What could you customize on this box?
 * Why is it useful to be able to customize objects?
+* In what cases would a desiner *not* want to provide a customizable object?
 * What happened as you input different values?
 * Which features did not seem to work properly?
 * What features would you like to add to this object?
 
 Lesson 2: Customizing in OpenSCAD 
 =========
-1. Download [this thing]
+This method of editing an OpenSCAD file is very similar to the customizer at the Thingiverse. The biggest difference is you have access to all the lines and elements. You can change anything and everything.  If you are not careful in your edits, you may find that the code will no longer run properly. If you manage to completely break things, just delete the file and download a fresh copy.
+
+The 
+
+1. Download [the OpenSCAD source](http://www.thingiverse.com/download:1878740) for this thing.
+2. Open the file in OpenSCAD and find the [ Outside Dimensions ] section
+  - Locate the line that looks like: boxX = 40;
+  - Change the line to match this: boxX = 50; 
+  - Press F5 to render a preview
+  - try adjusting the X, Y and Z values; hit F5 to render the model again. Make sure each line ends with a ';'.
+  - try entering a negative number
+3. Try adjusting the [ Compartments ] section
+  - You may find that you can only adjust one of the settings; we will look more at this in a latter lesson
+
+Questions:
+---------
+* What could you customize here?
+* Which sections did not seem to work?
+* How is this different than using the customizer at Thingiverse?
+* What advantages/disadvantages does this method have over working at Thingiverse?
+
+Lesson 3: Variables
+=========
+This section is a little dry and doesn't have a lot of practical things to do. It is pretty important though so this might be a good time to stretch your legs and get a cookie or an apple before you continue.
+
+The changes you were making under the [ Outside Dimensions ] sections were to 'variables.'Variables in OpenSCAD are containers that can hold integers (1, 2, -99999990002), real numbers (-1.123, 6.022, 99.4), boolean (true, false), arrays ([0, 5, 100], [[3, 4 5], [55, 0, 2]]) and text ('Hello world!').
+
+
+Variables are a convenient way to store values in an easily identifiable package. This method also makes OpenSCAD projects easier to edit and make adjustable.  Compare the examples below:
+
+Example 1:
+union() {
+    cube([5, 5, 30], center = true);
+    cube([5, 30, 5], center = true);
+    cube([30, 5, 5], center = true);
+}
+
+
+#ADD IMAGE
+
+Exmple 2:
+short = 5;
+long = 30;
+union() {
+    cube([short, short, long], center = true);
+    cube([short, long, short], center = true);
+    cube([long, short, short], center = true);
+}
+
+#ADD IMAGE
+
+Both examples make exactly the same shape. Copy and paste example 1 into a new OpenSCAD file.  
+1. Try and adjust Example 1 to match the image shown here. 
+  -Hint the values are 2 and 40.
+2. Now try with Example 2. 
+  - If you're anything like me, you probably skipped the steps above and said, 'Yeah, yeah, I get it...'. I encourage you to give step 2 a try just so you can actually try out using variables in a clean space where you can't break too much.
+3. Try out example 3 below. This one is really surpring if you are new to OpenSCAD.
+
+Example 3:
+short = 5;
+long = 30;
+union() {
+    cube([short, short, long], center = true);
+    cube([short, long, short], center = true);
+    cube([long, short, short], center = true);
+}
+
+short = 2;
+long = 40;
+color("red")
+union() {
+    cube([short, short, long], center = true);
+    cube([short, long, short], center = true);
+    cube([long, short, short], center = true);
+}
+
+You probably expected to get this:
+
+But you should have seen this:
+
+This is because OpenSCAD does not handle variables in the same way as say Python or another programing language you may have used. It calculates all the variables first and uses the last state they are in when it begins drawing. This means you need to be aware of the 'scope' of your variables. More on this later. I'm just planting the seeds here.
+
+#ADD IMAGE 3, 3.1
+
+Something to keep in mind when you create variables is that they are not just for your referrence NOW, but also for you and others in the future. Just because 'foo' and 'dog' look like great variables for a one-off project now, they won't be at all helpful in six hours when you come bak to a section that started out as a test and turned into something useful. Try to use useful names. I like to be as descriptive as possible while keeping my variable names short. I also like to use cammelCappedNames or under_scored_names. 
+
+In many programming languages variables that start with a Capital Letter are treated in a special way. It is good habbit to start your variables with a lower case. Also, most languages will try to interpret dashes as a literal subtraction. A variable named-like-this in OpenSCAD literally means: 'named' minus 'like' minus 'this'.  Ugg. 
+
+Questions:
+---------
+* How can variables make your OpenSCAD designs better?
+* What are some things to think about when namming a variable?  Explain to someone else how you will name your variables.
+* What happened in example 3? Explain to someone else why you got that result.
+
+Lesson 4: Working with modules
+========
+This lesson has lots of opportunities to make mistakes and break stuff.  It should be a bit more fun than the previous section. If you totally bork up the file, download another copy and start over.
+
+Modules are sort of a special variable name that holds a recipe to do stuff. A module can do stuff and can also call to other modules and make them do stuff.
+
+In this lesson you will work with the dividedBox() module that calls several other modules to draw the box, divide it up and add a lid.  You are about to add some extra lids to the model. Maybe you want to make sure you have a backup lid?
+
+1. Locate the module dividedBox() and find the section that looks like this:
+
+  translate([-boxX, 0, -boxZ/2+wallThick/2])
+    rotate([0, 180, 0])
+    lid();
+
+  This section is actually all one line that does three things: 
+  - moves the drawing 'pen' from 0, 0, 0 to the left side of the box
+  - rotates the drawing surface
+  - draws the lid()
+
+2. Try to add a second lid to the right side of the box.  
+  - Hint 1: everything should be exactly the same except for one character.
+  - Hint 2: you need to move the second lid in the positive direction
+
+3. CHALLENGE: Add a third and fourth lid in front and behind the box.
+  - Hint: most of the code is the same once again, but you will need to move in the Y axis.
+
+Questions:
+---------
+* Why is it useful to use modules? Think of a project where it would be useful to be able to make multiple copies the same object quickly.
+* What would be a painful and boring alternative to using modules? 
+
+Lesson 5: Writing your own module
+========
+Remember way back to the customizer lessons? Probably not. I'll wait here while you go back and look at the part where I told you to play with the compartments. You'll probably notice something strange about the yCompartment variable. 
+
+Don't worry, I've got a cup of coffee. I can wait.
+
+You probably noticed that you can adjust the xCompartment values, but that the yCompartment variable doesn't do antyhing at all.  This is because the yCompartment module isn't finished. I left it for you to try writing!
+
+A few notes about modules before you jump in:
+* Modules can receive variables by putting variables into the parenthesies. When the module is called it will expect a value to be 'passed' to it. In this case the (mostly useless) module 'sphereOmatic' expects to get the variable diameter. It will draw a colored sphere when called. 
+
+Example 1:
+
+  module sphereOmatic(diameter, myColor) { 
+    $fn = 36; // set the number of segments a curve should have
+    color(myColor) sphere(r=diameter/2);} // set the color and draw a sphere
+
+Every time it is called, a new value for diameter and color can be sent.  Try out the example below.
+
+Example 2:
+  module SphereOmatic(diameter, myColor) { 
+    $fn = 36; color(myColor) sphere(r=diameter/2);
+  }
+
+  sphereOmatic(5, "yellow");
+  translate([0, 0, 20]) sphereOmatic(10, "blue");
+  translate([0, 0, -20]) sphereOmatic(4, "green");
+
+ADD IMAGE 1
+
+1. Try the code out above. Change the sphere sizes and colors.
+2. Add a sphere to the left and right of the yellow sphere with the diameter 5 and the color silver and black.
+
+Each time you call out the name of the module you send along with it a new diameter and a new color. These values are stuck inside the module. They are stored inside variables that are only available to sphereOmatic.  No other part of the script is aware of the variable called 'color'.  We say that the 'scope' of myColor is local to sphereOmatic. Variables like boxX and boxY are called 'global variables.' Any part of the OpenSCAD script can see them. They don't need to be passed around. We say the scope of these variables is global. This is a big topic that can take up an entire month in a Computer Science course. Don't panic if you don't get it yet. I just wanted to introduce you to the concept.  
+
+What you need to know is this: If you run a module from within another module you need to send any information along that it needs to know. In this case the yDividers module needs to know how big the innner box is so it can make the divders the right size.  
+
+The next section is really challenging and will probably take some trial-and-error to figure out exactly what you need to do. This would be a good opportunity to get some fresh air and a drink of water before continuing.  
+
+If you cannot solve this problem, don't worry, you can continue on with the rest of the lessons and come back to this later.
+
+3. Start out with a fresh version of the code and find the module dividedBox()
+4. Find where yDividers is called; make sure you pass the size of the innerBox to it.
+  - Hint: look at how xDividers() is called just above  
+5. Find the module xDividers() and take a look at what it does.  
+6. Copy and paste the contents of the xDividers module into the yDividers module.  DOUBLE CHECK the opening and closing curly brackets. If you end up with too many your script will not run.
+7. You will need to change a few things to make the code work properly.
+  - Hint 1: you are working with the yDividers now. Make sure you are working with the y dimensions everywhere inside this module.
+  - Hint 2: you will need to adjust the cube() statement so the divider is drawn correctly  - Hint 3: The red highlighted pars of your drawing are the part you are working on 
+
+# ADD IMG
+
+Questions:
+---------
+* Why could you ajust the columns, but not adjust the number of rows at first?
+* Why did you need to include the variable innerBox when you called yDividers()?
+* Why do you think there is an 'if' statement inside the module?
+* What do you think the 'for' statement does? Try to explain this to someone else.
+* Try to explain what 'scope' means to someone.
+
+

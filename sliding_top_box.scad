@@ -137,28 +137,38 @@ module lid(cutter = false) {
 }
 
 /*
-  create the dividers for the columns
+  create the dividers for the columns in the box
 */
 module xDividers(innerBoxDim) {
+  
+  // copy from here
+
   echo ("This is the xDividers module");
   echo ("innerBoxDim=", innerBoxDim);
   // the number of dividers is always one less than the number of compartments
   cols = xCompartments - 1;
 
   // calculate the spacing of the dividers based on the dimensions of the inner box
-  // notice that element 0 of the innerBoxDim variable contains the X dimension  
+
+  // element 0 of the innerBoxDim variable contains the X dimension  
   increment = innerBoxDim[0]/xCompartments;
+
+  // if the number of compartments is bigger than 1, do this:
   if ( xCompartments > 1) {
+    // this loops several times to make each divider from 1 to the number of columns
     for ( i = [1 : cols]) {
       // move each divider into place
         translate([-innerBoxDim[0]/2+i*increment, 0, 0])
+          // draw a cube
           cube([dividerThick, innerBoxDim[1], innerBoxDim[2]], center =true);
       
-    }
-  }
+    } // this bracket is the end of the "for" loop
+  } // this bracket is the end of the IF statement
   
 
-}
+  // copy to here
+
+} // this should be the LAST curly bracket for xDividers
 
 
 /*
@@ -172,9 +182,13 @@ module xDividers(innerBoxDim) {
   * use '#' to help debug: 
     https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Chapter_8_--_Debugging_aids
 */
-module yDividers() {
- 
-}
+module yDividers(innerBoxDim) {
+// paste below this point.  Be careful that you pay attention to the curly brackets
+
+
+
+
+} // this should be the LAST curly bracket for yDividers. 
 
 
 /*
@@ -211,14 +225,22 @@ module dividedBox() {
   // Define the volume that will be subtracted from the box
   // a "fudge factor" is added to avoid Z fighting when faces align perfectly
   innerBox = [boxX-wallSub, boxY-wallSub, boxZ-wallSub+fudge*2];
-  // call the basic box module
 
-
+  // call the basic box module to add the box
   basicBox(outerBox, innerBox);
 
+  // explain what's going on
   echo ("innerBox=", innerBox);
+
+  // draw the dividers in the X dimension
   xDividers(innerBox);
-  yDividers();
+
+  // draw the dividers in the Y dimension
+  #yDividers(); // the # will highlight this in red when it is drawn
+
+
+  // move the lid to the left of the box and also move it down  so it sits at the
+  // same level as the bottom of the box
   translate([-boxX, 0, -boxZ/2+wallThick/2])
     rotate([0, 180, 0])
     lid();
