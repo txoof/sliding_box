@@ -1,0 +1,67 @@
+How I designed this:
+1. Create a sketch and label the elements that will need to be adjustable
+2. Outline the features that will be customizable 
+3. Outline the modules that will likely be necessary
+
+
+
+Requirements
+===========
+
+Objectives
+========
+Students Will Learn...
+-----------------------
+* How to use variables 
+* How to use modules
+* How pass variables
+  - scope of variables
+* How to write a module
+* The basics of parametric design
+* How to create customizable SCAD files
+* How to add a customizable Thing to Thingiverse
+* A little about licences
+
+
+Audience
+========
+* Users with some basic OpenSCAD experience
+* Users that wish to improve their OpenSCAD skills
+* Users that wish to learn the basics of Parametric Design/Customization
+
+Preparation
+===========
+* [OpenSCAD 2015.03](http://www.openscad.org/downloads.html) or greater
+* [Basic Understanding of OpenSCAD](https://i.materialise.com/blog/openscad-tutorial)
+    - Basic understanding of the OpenSCAD language format
+    - Ability to draw [primitives](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Primitive_Solids)
+     - Ability to [transform objects](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Chapter_4_--_Transform) (rotate, translate, etc.)
+     - Ability to [union()](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#union) and [difference()](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#difference) objects
+
+Optional:
+---------
+* A [Thingiverse](htpp://thingiverse.com) account for customizing models 
+
+
+Lesson 1: Introduction to the Customizer
+=========
+1. Open [this thing at Thingiverse.com](http://www.thingiverse.com/thing:1201466/) and launch the customizer
+  - Note: You will need a free Thingiverse account.  If you do not have/want a thingiverse account please skip to Lesson 2
+2. Play around with the customizable elements.  Try to make a box that has the following dimensions:
+  - X: 30, Y: 50, Z:25
+  - Wall thickness: 2
+  - xCompartments: 4
+  - yCompartments: 1 
+3. Create an STL and download it later by clicking on the "Create Thing" link.
+
+Questions
+---------
+* What could you customize on this box?
+* Why is it useful to be able to customize objects?
+* What happened as you input different values?
+* Which features did not seem to work properly?
+* What features would you like to add to this object?
+
+Lesson 2: Customizing in OpenSCAD 
+=========
+1. Download [this thing]

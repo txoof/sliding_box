@@ -32,34 +32,11 @@ fudge = .001;
 /*
   OpenSCAD Parametric Box Lesson
 
-  ADD LESSON HERE
+  Created by Aaron Ciuffo (aaron.ciuffo/txoof) - reach me at gmail or thingiverse
 
-  Activities:
-  * Adjust the size of the box using customizer
-  * Adjust the size of the box using the editor
-  * Add the lid to the right of the box (+X)
-  * Adjust the number of columns
-    - Why can you not adjust the number of rows?
-  * Add the row dividers by following example in column dividers
-    - Why is there a variable name in the module statement?
-    - Why is there an if statement in the module?
+  Released under the Creative Commons Share Alike License
+  http://creativecommons.org/licenses/by-sa/3.0/
 
- 
-  Challenge Activities:
-  * Make the lid slot customizable
-  * Give the lid raised ridges instead of a slot
-    - Hint: this is no longer a difference() opperation
-  * Customize the INTERNAL dimensions rather than the external dimensions
-  * add text to the lid
-    - Hint: https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Text
-    - Requires version > 2015.03
-  * play with the "fudge" variable in the hidden section 
-    - Explain what it does.
-    - Why is it not negative?
- 
-    
-
-  ADD LICENSE
 
   Style Notes:
     * Indentation is used to show nested calls:
