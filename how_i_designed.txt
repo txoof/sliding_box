@@ -1,3 +1,14 @@
+# TO DO
+add images
+add proper objectives at the head of each lesson
+spell check
+Add [hidden] section to lesson 11
+finish lesson 12
+Test out name plate code on thingiverse
+
+
+
+
 How I designed this:
 1. Create a sketch and label the elements that will need to be adjustable
 2. Outline the features that will be customizable 
@@ -20,7 +31,7 @@ Students Will Learn...
 * The basics of parametric design
 * How to create customizable SCAD files
 * How to add a customizable Thing to Thingiverse
-* A little about licences
+* A little about licenses
 
 
 Audience
@@ -45,7 +56,7 @@ Optional:
 
 Lesson 1: Introduction to the Customizer
 =========
-The Thingiverse offers users the ability to display their models and designs through a sort of gallery.  The gallery can contain images, pdfs, zipped files STL models, OpenSCAD soure files and many other file types. 
+The Thingiverse offers users the ability to display their models and designs through a sort of gallery.  The gallery can contain images, pdfs, zipped files STL models, OpenSCAD source files and many other file types. 
 
 Most models on the Thingiverse are STL files. These are sort of like loaves of bread; they have been made to a recipe with a program like Rhino, Sketchup, Blender or OpenSCAD. They are more-or-less immutable and cannot be changed without a special STL editor.
 
@@ -62,20 +73,17 @@ Explore this design and see what can be manipulated. Think about this might be u
   - yCompartments: 1 
 3. Create an STL and download it later by clicking on the "Create Thing" link.
 
-Questions:
----------
+### Questions:
 * What could you customize on this box?
 * Why is it useful to be able to customize objects?
-* In what cases would a desiner *not* want to provide a customizable object?
+* In what cases would a designer **not** want to provide a customizable object?
 * What happened as you input different values?
 * Which features did not seem to work properly?
 * What features would you like to add to this object?
 
 Lesson 2: Customizing in OpenSCAD 
 =========
-This method of editing an OpenSCAD file is very similar to the customizer at the Thingiverse. The biggest difference is you have access to all the lines and elements. You can change anything and everything.  If you are not careful in your edits, you may find that the code will no longer run properly. If you manage to completely break things, just delete the file and download a fresh copy.
-
-The 
+Using OpenSCAD to edit an OpenSCAD file is very similar to the customizer at the Thingiverse. The biggest difference is you have access to all the lines and elements. You can change anything and everything.  If you are not careful in your edits, you may find that the code will no longer run properly. If you manage to completely break things, just delete the file and download a fresh copy.
 
 1. Download [the OpenSCAD source](http://www.thingiverse.com/download:1878740) for this thing.
 2. Open the file in OpenSCAD and find the [ Outside Dimensions ] section
@@ -84,11 +92,10 @@ The
   - Press F5 to render a preview
   - try adjusting the X, Y and Z values; hit F5 to render the model again. Make sure each line ends with a ';'.
   - try entering a negative number
-3. Try adjusting the [ Compartments ] section
+3. Try adjusting settings in the [ Compartments ] section
   - You may find that you can only adjust one of the settings; we will look more at this in a latter lesson
 
-Questions:
----------
+### Questions:
 * What could you customize here?
 * Which sections did not seem to work?
 * How is this different than using the customizer at Thingiverse?
@@ -100,27 +107,27 @@ This section is a little dry and doesn't have a lot of practical things to do. I
 
 The changes you were making under the [ Outside Dimensions ] sections were to 'variables.'Variables in OpenSCAD are containers that can hold integers (1, 2, -99999990002), real numbers (-1.123, 6.022, 99.4), boolean (true, false), arrays ([0, 5, 100], [[3, 4 5], [55, 0, 2]]) and text ('Hello world!').
 
-
 Variables are a convenient way to store values in an easily identifiable package. This method also makes OpenSCAD projects easier to edit and make adjustable.  Compare the examples below:
 
 Example 1:
-union() {
-    cube([5, 5, 30], center = true);
-    cube([5, 30, 5], center = true);
-    cube([30, 5, 5], center = true);
-}
+  union() {
+      cube([5, 5, 30], center = true);
+      cube([5, 30, 5], center = true);
+      cube([30, 5, 5], center = true);
+  }
 
 
 #ADD IMAGE
 
-Exmple 2:
-short = 5;
-long = 30;
-union() {
-    cube([short, short, long], center = true);
-    cube([short, long, short], center = true);
-    cube([long, short, short], center = true);
-}
+Example 2:
+
+  short = 5;
+  long = 30;
+  union() {
+      cube([short, short, long], center = true);
+      cube([short, long, short], center = true);
+      cube([long, short, short], center = true);
+  }
 
 #ADD IMAGE
 
@@ -128,26 +135,27 @@ Both examples make exactly the same shape. Copy and paste example 1 into a new O
 1. Try and adjust Example 1 to match the image shown here. 
   -Hint the values are 2 and 40.
 2. Now try with Example 2. 
-  - If you're anything like me, you probably skipped the steps above and said, 'Yeah, yeah, I get it...'. I encourage you to give step 2 a try just so you can actually try out using variables in a clean space where you can't break too much.
-3. Try out example 3 below. This one is really surpring if you are new to OpenSCAD.
+  - If you're anything like me, you probably skipped the steps above and said, 'Yeah, yeah, I get it.' I encourage you to give step 2 a try just so you can actually try out using variables in a clean space where you can't break too much.
+3. Try out example 3 below. This one is really surprising if you are new to OpenSCAD.
 
 Example 3:
-short = 5;
-long = 30;
-union() {
-    cube([short, short, long], center = true);
-    cube([short, long, short], center = true);
-    cube([long, short, short], center = true);
-}
 
-short = 2;
-long = 40;
-color("red")
-union() {
-    cube([short, short, long], center = true);
-    cube([short, long, short], center = true);
-    cube([long, short, short], center = true);
-}
+  short = 5;
+  long = 30;
+  union() {
+      cube([short, short, long], center = true);
+      cube([short, long, short], center = true);
+      cube([long, short, short], center = true);
+  }
+
+  short = 2;
+  long = 40;
+  color("red")
+  union() {
+      cube([short, short, long], center = true);
+      cube([short, long, short], center = true);
+      cube([long, short, short], center = true);
+  }
 
 You probably expected to get this:
 
@@ -157,15 +165,17 @@ This is because OpenSCAD does not handle variables in the same way as say Python
 
 #ADD IMAGE 3, 3.1
 
-Something to keep in mind when you create variables is that they are not just for your referrence NOW, but also for you and others in the future. Just because 'foo' and 'dog' look like great variables for a one-off project now, they won't be at all helpful in six hours when you come bak to a section that started out as a test and turned into something useful. Try to use useful names. I like to be as descriptive as possible while keeping my variable names short. I also like to use cammelCappedNames or under_scored_names. 
+Something to keep in mind when you create variables is that they are not just for your reference NOW, but also for you and others in the future. Just because 'foo' and 'dog' look like great variables for a one-off project now, they won't be at all helpful in six hours when you come bak to a section that started out as a test and turned into something useful. Try to use useful names. I like to be as descriptive as possible while keeping my variable names short. I also like to use cammelCappedNames or under_scored_names. 
 
-In many programming languages variables that start with a Capital Letter are treated in a special way. It is good habbit to start your variables with a lower case. Also, most languages will try to interpret dashes as a literal subtraction. A variable named-like-this in OpenSCAD literally means: 'named' minus 'like' minus 'this'.  Ugg. 
+In many programming languages variables that start with a Capital Letter are treated in a special way. It is good habit to start your variables with a lower case. Also, most languages will try to interpret dashes as a literal subtraction. A variable named-like-this in OpenSCAD literally means: 'named' minus 'like' minus 'this'.  Ugg. 
 
-Questions:
----------
+#### Questions:
 * How can variables make your OpenSCAD designs better?
-* What are some things to think about when namming a variable?  Explain to someone else how you will name your variables.
+* What are some things to think about when naming a variable?  Explain to someone else how you will name your variables.
 * What happened in example 3? Explain to someone else why you got that result.
+
+#### Challenge:
+* Make a shape like the one shown in Img 3.2
 
 Lesson 4: Working with modules
 ========
@@ -190,13 +200,15 @@ In this lesson you will work with the dividedBox() module that calls several oth
   - Hint 1: everything should be exactly the same except for one character.
   - Hint 2: you need to move the second lid in the positive direction
 
-3. CHALLENGE: Add a third and fourth lid in front and behind the box.
-  - Hint: most of the code is the same once again, but you will need to move in the Y axis.
+# ADD IMG 4.0
 
-Questions:
----------
+#### Questions:
 * Why is it useful to use modules? Think of a project where it would be useful to be able to make multiple copies the same object quickly.
 * What would be a painful and boring alternative to using modules? 
+
+#### Challenge
+* Add a third and fourth lid in front and behind the box.
+  - Hint: most of the code is the same once again, but you will need to move in the Y axis. 
 
 Lesson 5: Writing your own module
 ========
@@ -257,5 +269,346 @@ Questions:
 * Why do you think there is an 'if' statement inside the module?
 * What do you think the 'for' statement does? Try to explain this to someone else.
 * Try to explain what 'scope' means to someone.
+
+Lesson 6: Begin your own customizable project
+========
+You have enough experience now to begin creating your own customizable project. Along the way we will learn about the Thingiverse customizer and adding your own customized projects. Part of each section will include some sample code and a problem to solve.
+
+You will be creating a customizable name plate like the one shown here.
+
+# ADD IMAGE 6.1
+
+Comment Blocks:
+When openscad sees this '//' it ignores everything from the last slash to the end of the line. This is handy for leaving notes to yourself or others. Sometimes comments need to extend over multiple lines. When OpenSCAD sees /* */ everything between the stars is ignored. This is called a 'comment block.' 
+
+[Thingiverse Customizer:](http://customizer.makerbot.com/docs)
+The customizer uses special comment blocks to help the customizer do its magic.
+
+1. Open a new OpenSCAD project and create header like the one below. This is a Tab header for the customizer. 
+
+  /* [Base] */
+
+2. Look at the example image and think about the variables and values you will need to create the base. What variables should your users be able to adjust? Add some well named variables below that will set the X, Y and Z size of the base.
+3. Create a module for drawing a base and call the module. Make sure this compiles.
+
+  module base() {
+  }
+
+  base();
+
+
+4. Add instructions to the base module to draw a rectangular base using the variables you created earlier. If you used different variables, feel free to use them. 
+  
+  module base() {
+    cube([xSize, ySize, zSize], center = true)
+  }
+
+  base();
+
+5. Challenge: Use a roundedBox() instead of a cube() for the base. You will need to import MCAD/boxes.scad.  Learn more at the [wiki](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries).
+
+Questions:
+---------
+* What other variables do you think you will need in creating this project?
+* Make a list of the variables you think you will need.
+* Make a list of the modules you think you will need as you complete this project.
+
+Lessn 7: Add customizable mounting holes
+=======
+You should have code that looks something like this now:
+  /* [Base] */
+  xSize = 45; // lenght of name tag
+  ySize = 15; // height of name tag
+  zSize = 3;  // thickness of name tag
+
+  module base() {
+    cube([xSize, ySize, zSize], center = true)
+  }
+
+  module base()
+
+# ADD IMG 7.1
+
+The name plate should have two mounting holes in either corner. The hole diameter should be customizable. The holes should move with the size of the name plate so they are located near the top right and top left corners. The position will need to be calculated based on the x, y and z size of the base.
+
+# ADD IMG 7.2
+
+1. Add a variable under the [Base] configuration for the hole diameter.
+2. Create a new module that makes two holes in the corners of the base. Start with the code provide below and try to move the holes so they are both 1/2 of the diameter from the edge. Copy and paste this just above the base() module.
+
+  module holes() {
+    translate([-xSize/2, ysize/2, 0])
+      // create a cylinder with 36 segments that is 2 times the thicknes of the base
+      translate([-xSize/2+holeDia, ySize/2, 0])
+        #cylinder(r = holeRad, h = 2*zSize, $fn = 36, center = true);
+      translate([xSize/2-holeDia, ySize/2, 0])
+        #cylinder(r = holeRad, h = 2*zSize, $fn = 36, center = true);
+      
+  }
+
+3. Add a call just below the base() call to make the holes appear. Your code should look like this:
+  module base() {
+    cube(baseSize, center = true);
+  }
+
+  module holes() {
+  translate([-xSize/2+holeDia, ySize/2, 0])
+    #cylinder(r = holeRad, h = 2*zSize, $fn = 36, center = true);
+  translate([xSize/2-holeDia, ySize/2, 0])
+    #cylinder(r = holeRad, h = 2*zSize, $fn = 36, center = true);
+}
+
+  base();
+  holes();
+
+4. When you are satisifed with the location of the holes make sure you remove the '#' debugging marks. The '#' mark hilights the element in transparent red.
+
+Questions:
+---------
+* What did you do to make sure the holes were 1/2 of the diameter from the edge?
+* Why is this method better than hard-coding in a number for the placement of the holes?
+* How does using a formula or equation help make this thing more customizable?
+
+Lesson 8: Adding extruded text
+========
+In openscad 2015.03 text support was added officially. Using the linear_extrude() built-in raised and embossed text can be easily added to projects. 
+
+The [linear_extrude()](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Linear_Extrude) module has many features. We will only be using it in the most simple form here. See the OpenSCAD wiki for more information on other features.
+
+Your next task is to add a module that will provide extruded text. Sometimes it is helpful to turn everything else off while you are working on a new feature. This can be done by simply adding a // in front of any line that you do not wish to execute.
+
+Think back to the list of variables you made in the previous lessons. What variables do you think will be needed for the text?
+
+# ADD IMG 8.1
+
+1. Comment out the base() and holes() modules:
+
+  //base();
+  //holes();
+
+2. Create a variable block for customizing text under the [Base] block:
+
+  */ [Text] */
+  textHeight = 2; // height over base
+  textSize = 7.5; // text size
+  myColor = "yellow" // color in rendering 
+  myFont = "Liberation Sans" // more on this later!
+
+3. Create a module for creating extruded text:
+  
+  module textExtrude() {
+    // the following four lines are all actually one command that ends with the ';'
+    color(myColor)
+      linear_extrude(height = textHeight)
+      text("My Name", halign = "center", valign = "center", size = textSize, 
+        font = myFont);
+  }
+
+4. Test out your code; make sure everything else is commented out
+
+  //base();
+  //holes();  
+  textExtrude();
+
+5. This project is super boring with "My Name" on the plaque. Let's make that customizable. Add another variable under the [Text] block for customizing the text. Make sure you use that variable appropriately in the extrude module.
+
+Questions:
+---------
+* What did you need to do to make the text more customizable?
+* What do you think we need to do to join all these pieces together?
+
+Lesson 9: Joining it all together
+========
+Objectives: 
+* Practice calling one module from another
+* Practice using union()
+
+Right now we have three separate parts that look like they are joined together. In some cases, this can be exported as an STL and it will indeed print properly on a 3d Printer. The text is not correctly placed however. Also, if we've made any errors in our placement of objects we may end up with something that *looks* printable, but that is actually impossible to print.  
+
+We can solve this by joining everything together using OpenSCAD's union() and difference() modules. These are in the class of [boolean](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Chapter_5_--_Boolean_combination) opperations and could be a whole set of lessons in themselves.  
+
+1. Create a module that contains all the separate modules we need to make the name plate. Call the module makeTag()
+2. Check that everything looks like the sample image. Notice that the holes are filled in and that the text is too low on the name plate. We will fix that now!
+
+# ADD IMG 9.1
+
+3. In the module we need to union() the text and the base. The text needs to be raised up so it appears the proper height over the base. Start with the code below and try to figure out how to raise the text so it is EXACTLY the height of base from the origin. Also try to move the text so it doesn't run into the holes.
+
+  module makeTag() {
+    union() {
+      base();
+      translate([0, 0, 0]) textExtrude();
+    }
+    #holes() // turn on debug highlighthing to make this easier to see
+  }
+
+Lesson 10: Removing the unwanted bits
+=========
+Objectives:
+* Practice using difference()
+* Practice thinking parameterically
+
+You were probably tempted to move the text using hard-coded values like this:
+
+  module makeTag() {
+    union() {
+      base();
+      translate([0, -3, 1.5]) textExtrude();
+    }
+  }
+
+# ADD IMG 10.1
+
+That should put the text just about out of the way of the holes, but the text size is adjusted or the base size is changed, the text will look a bit odd. 
+
+# ADD IMG 10.2
+
+Instead consider moving the text so that it moves relative to the size of the base. Just like the holes, the text will move with the size of the base rather than being static. In this example the text moves down by 1/5 of the ySize and the text floats exactly at the surface of the base.
+
+  module makeTag() {
+    union() {
+      base();
+      translate([0, -ySize/5 , zSize/2]) textExtrude();
+    }
+  }
+
+Finally you need to add the mounting holes using difference(). Difference starts with the top level object (first listed) and then begins removing each subsiquent object from the first any where the objects intersect. In this case the union() of base and text makes an new single object.
+
+1. Add a difference() statement to module makeTag()
+
+  module makeTag() {
+    difference() {
+      union() {
+        base();
+        translate([0, -3, 1.5]) textExtrude();
+      } //end union
+    } // end difference
+  } // end makeTag()
+
+2. Check that the result looks like the image above. Nothing should have been subtracted yet.
+3. Add a call to the holes() module below the union() statement to make the mounting holes
+
+  module makeTag() {
+    difference() {
+      union() {
+        base();
+        translate([0, -3, 1.5]) textExtrude();
+      } //end union
+    } // end difference
+      #holes(); // turn on debuging to check the location, remove the '#' once done
+  }  // end makeTag()
+
+4. The final model should look like this:
+
+# ADD IMG 10.3
+
+Challenge:
+---------
+* Make the base a different color
+* Use multiple fonts
+* Use multiple shapes for the base
+* Make a hexagonal base or a star shaped base
+
+Questions:
+---------
+* What are some of the benefits for making models parametric?
+* What are some of the disadvantages of hard-coding values?
+* Explain how you think the difference and union commands work to someone else.
+
+Lesson 11: Publishing to Thingiverse
+=========
+Objectives:
+* Setup variables for Customizer
+
+The last step is to publish this thing onto the Thingiverse. Once you have published it anyone with an account can use the Customizer to make derivative things. This is great! You can share you ideas with other people and they can run with your ideas and make them bigger, more atristic, more rediculous and generally more awesome. 
+
+The first step is making sure your thing is easy to customize. We've started out on the right foot by creating logical variable tabs and giving the variables sensible names:
+
+  /* [Base] */
+  xSize = 45; // length
+  ySize = 15; // height
+  zSize = 3; //thickness
+  holeDia = 3.5; // hole diameter
+
+  /* [Text] */
+  textHeight = 2;
+  textSize = 7.5;
+  myFont = "Liberation Sans"; 
+  myColor = "yellow";
+
+The next step is to take advantage of some of the [Customizer Markup](http://customizer.makerbot.com/docs). Any variable without specific markup will simply be a user-input field.
+
+# ADD IMG 11.1
+
+Sometimes we want to limit the range of valid inputs. This can be done by using a range.
+
+1. Add a range using the following format: // [minimu:maximum] description
+  /* [Text] */
+  textHeight = 2; // [1:10] height of text over base
+  textSize = 7.5; // [1:50]
+
+
+It is also possible to add a drop down menu of pre-populated options using list. Here's an opportunity to return to the font face choice. In version 2015.03-2 it is possible to use all of the system-installed fonts, but those fonts are not available on Thingiverse. Check the documenation wiki for more information on [fonts](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Text] and [colors](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#color).
+
+2. Add a list of options using the following format: // [option1, option2, option3]
+  myFont = "Liberation Sans"; // [Liberation Mono, Liberation Sans, Liberation Sans Narrow and Liberation Serif]
+  myColor = "yellow"; // [green, yellow, blue, red, silver, black] Text color
+
+One other useful customizer section is the /*[Hiden]*/ section. This section, as the name implies is hidden from view. This is a great spot to do calculations or set up variables for use elsewhere. If you know that you will be dividing a variable by 2 every time you use it Such as the holeDiameter, set this value in the Hidden section. 
+
+When writing a program, if you do something more than twice by hand, you should consider finding another way of doing it.  Every time you divide by 2, or add two variables together manually you risk a typo that you will need to find and correct later. By limiting the number of times you make a particular calculation debugging and changes become much, much easier.
+
+3. Add a [Hidden] section and add a variable for holeRad = holeDia/2; 
+4. Update your code to use holeRad in the holes() module.
+
+Questions:
+---------
+* What types of variables in this project should be set as a range?
+* What things should be set as a drop down list? Why?
+* Can you think of a specific instance where you would want to prevent a user from inputting a specfic value? What about when division is invovled?
+* How can the [Hidden] section be useful to you as a desinger? How is it useful to other people that review your designs?
+* How can setting variables under the Hidden section save you from errors later?
+
+Lesson 12: Getting Ready to Publish
+=========
+The final step in this is to upload your project to Thingiverse so other people can play with it, improve on it and share their work. There are a few things you will need to do before you can share this project.  
+* [Create an account](https://accounts.thingiverse.com/register?)
+* Choose a License 
+
+Creating an account should be pretty self-explanitory. If you want to skip this step, continue on for some last little tid-bits. 
+
+Here's a really interesting fact about Copy Right. You already have it. Once you hit the save key, you created a piece of work that can be copyrighted. The act of creation is all it takes. You have the sole right to decide who will use your work and how it will be used. Most of the stuff you see on the Thingiverse is copyrighted, but copyrighted in such a way that preserves the creators reputation, but allows anybody to make stuff and have fun with it. This is done through chosing a license that matches how you feel about your work.
+
+Is your work super secret and the basis of your billion dollar business plan? Don't share it! Keep that to your self! Or is your work a good idea based on the good ideas of all those that have come before you? Or something inbetween? How would you feel about someone using your idea to make something new? How would you feel about someone profiting from your work? Once you've answered those questions the next steps should be easy.
+
+Take a look at the [Creative Commons](https://creativecommons.org/licenses/) license page and see which license works best for you. There's a nice little 3 minute video that explains the basics of the licenses. 
+
+Choosing a license is not complex, but does require a bit of thought. This set of lessons that you have been reading is released under the Creative Commons Attribute-Share-Alike License. This means that if you want to publish your own version of the sliding top box or the name tag you should give me credit and you need to share your designs under the same terms, allowing others to modify and share the work as well. It also means that you can't sell the design. You are welcome to make real objects based on the design and sell them, but you can not take credit for the designs and sell those as your own.
+
+Giving credit is as simple as providing a user name, or an email address somewhere in your project. When you share your project on Thingiverse, or any other web site, you should also mention that your project is licensed under the Creative Commons Attribute-Share-Alike license so other people know where it came from.  
+
+Thingiverse also provides GPL licenses and BSD licenes. These are more specific and apply more to software than creative works, but can be applied to almost anything. 
+
+Because this project was originally released under the CC Share-Alike license, you really should choose the same license. I won't hunt you down and point a loaded lawyer at you, but I might give you a hard time if I come across one of your designs that is licensed in a more restrictive way.
+
+Questions:
+---------
+* Why would you bother to copyright your work at all?
+* Why should you respect the copyright of other's work?
+* Which license did you choose for this project? Why? Hint: there are only a few right answers to this questions.
+* Which license is best for work that you intend to share with the community?
+
+Lesson 13: Uploading your project for Customization
+=========
+The final step is to get your project up on the Thingiverse and get the customizer running. You will probably need to do some debugging and upload the files a few times; that's pretty normal.
+
+# ADD IMAGES AND DESCRIPTIONS HERE
+
+
+Closing:
+========
+Blah blah
+
+A final version of the [name tag](http://www.thingiverse.com/thing:1204005) can be found on the Thingiverse for reference and download.
 
 
