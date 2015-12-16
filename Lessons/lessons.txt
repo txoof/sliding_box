@@ -21,6 +21,9 @@ Summary:
 =======
 This is a customizable box with a sliding lid and customizable dividers created in OpenSCAD and is part of a series of OpenSCAD lesson found below.
 
+A full archive of the images, lessons and SCAD files can be found here:
+https://github.com/txoof/sliding_box
+
 **Please Note:** Some features have been left incomplete as an exercise for the reader.  For a complete version please see the [original box with sliding lid](http://www.thingiverse.com/thing:201304)
 
 
