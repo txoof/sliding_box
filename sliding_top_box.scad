@@ -34,6 +34,8 @@ fudge = .001;
 
   Created by Aaron Ciuffo (aaron.ciuffo/txoof) - reach me at gmail or thingiverse
 
+  December 16 2015
+
   Released under the Creative Commons Share Alike License
   http://creativecommons.org/licenses/by-sa/3.0/
 
