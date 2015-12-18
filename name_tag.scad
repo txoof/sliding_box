@@ -12,7 +12,7 @@ zSize = 3; //thickness
 holeDia = 3.5; // hole diameter
 
 /* [Text] */
-textHeight = 2; // [1:10] height of text over base
+textHeight = 2; // [1:10] 
 textSize = 7.5; // [1:50]
 myFont = "Liberation Sans"; // [Liberation Mono, Liberation Sans, Liberation Sans Narrow and Liberation Serif]
 myColor = "yellow"; // [green, yellow, blue, red, silver, black]
@@ -20,6 +20,8 @@ myText = "My Name"; // Your name here!
 
 /* [Hidden] */
 holeRad = holeDia/2;
+
+// preview[view:south, tilt:top diagonal] 
 baseSize = [xSize, ySize, zSize];
 
 include <MCAD/boxes.scad>
