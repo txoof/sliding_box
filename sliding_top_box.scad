@@ -1,14 +1,22 @@
 /* [Outside Dimensions] */
-boxX = 40; // width
-boxY = 60; // depth
-boxZ = 25; // height
-cornerRad = 3; // radius of curved corners
-wallThick = 2; // thickness of box walls
+// width
+boxX = 40; 
+// depth
+boxY = 60; 
+// height
+boxZ = 25;
+// radius of curved corners
+cornerRad = 3; 
+// thickness of box walls
+wallThick = 2; 
 
 /* [Compartments] */
-xCompartments = 3; // number of columns
-yCompartments = 2; // number of rows
-dividerThick = 1; // thickness of divider walls
+// number of columns
+xCompartments = 3;
+// number of rows - THIS FEATURE IS DELIBERATELY DISABLED. Please see the summar & lessons below!
+yCompartments = 2; 
+// thickness of divider walls
+dividerThick = 1; 
 
 /* [Lid] */
 // amount of play in the lid in mm - the lid can't be the exact same size as the opening
