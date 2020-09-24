@@ -18,4 +18,4 @@ Using OpenSCAD to edit an OpenSCAD file is very similar to the customizer at the
 * How is this different than using the customizer at Thingiverse?
 * What advantages/disadvantages does this method have over working at Thingiverse?
 
-[<< Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md) | [Lesson 3 - Variables](Lesson2_Variables.md)
+[<< Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md) | [Lesson 3 - Variables >>](Lesson2_Variables.md)
