@@ -54,4 +54,4 @@ When writing a program, if you do something more than twice by hand, you should 
     * How is it useful to other people that review your designs?
 * How can setting variables under the Hidden section save you from errors later?
 
-[<< Lesson 10 - Removing The Unwanted Bits](./Lesson10_Remove_Bits.md)
+[<< Lesson 10 - Removing The Unwanted Bits](./Lesson10_Remove_Bits.md) | [Lesson 11 - Preparing to Publishing to Thingiverse >>](./Lesson11_Publish.md)
