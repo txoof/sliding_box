@@ -14,8 +14,17 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md)
 * [Lesson 2 - Customizing in OpenSCAD](./Lesson2_OpenSCAD.md)
 * [Lesson 3 - Variables](Lesson3_Variables.md)
-* [Lesson 4 - Working with modules](./Lesson4_Modules.scad)
-* 
+* [Lesson 4 - Working With Modules](./Lesson4_Modules.scad)
+* [Lesson 5 - Writing Your Own Module](./Lesson5_Writing_Module.md)
+* [Lesson 6 - Begin your own Customizable Project](./Lesson6_Customizable_Project.md)
+* [Lesson 7 - Add Mounting Holes](./Lesson7_Mounting_Holes.md)
+* [Lesson 8 - Add Extruded Text](./Lesson8_Add_Text.md)
+* [Lesson 9 - Joining it All Together](./Lesson9_Joining_Together.md)
+* [Lesson 10 - Removing The Unwanted Bits](./Lesson10_Remove_Bits.md)
+* [Lesson 11 - Preparing to Publishing to Thingiverse](./Lesson11_Publish.md)
+* [Lesson 12 - License Your Thing](./Lesson12_License_Thing.md)
+* [Lesson 13 - Publish Your Thing](./Lesson13_Publish.md)
+* [Appendix - Solutions](./Appendix.md)
 
 <a name="IDProblem"></a>
 ## Identify A Problem
