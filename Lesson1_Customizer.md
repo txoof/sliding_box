@@ -28,4 +28,4 @@ Explore the design below and see what can be manipulated. Think about this might
 * What features would you like to add to this object?
 
 
-[<< Introduction](Readme.md) | [Lesson 2 - Customizing In OpenSCAD >>](Lesson2_Variables.md)
+[<< Lesson 0 - Introduction](Readme.md) | [Lesson 2 - Customizing In OpenSCAD >>](Lesson2_Variables.md)
