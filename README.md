@@ -10,6 +10,7 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Identify a Problem](#IDProblem)
 * [Define a Solution](#DefineSolution)
 * [Design Cycle](#DesignCycle)
+* [Lesson 0 - Introduction](./Lesson0_introduction.md)
 * [Lesson 1](./Lesson1.md)
 
 <a name="IDProblem"></a>
