@@ -36,3 +36,5 @@ Students will...
 
 ## Optional:
 * A [Thingiverse](htpp://thingiverse.com) account for customizing models 
+
+[<< Table of Contents](./README.md) | [Lesson 1 - Thingiverse Customizer >>](./Lesson1_Customizer.md)
