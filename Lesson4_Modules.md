@@ -29,4 +29,4 @@ In this lesson you will work with the `dividedBox()` module that calls several o
 
 
 
-[Lesson 3 - Variables](Lesson3_Variables.md) | [Lesson 5 - >>](./Lesson5_.md)
+[Lesson 3 - Variables](Lesson3_Variables.md) | [Lesson 5 - Writing Your Own Module >>](./Lesson5_Writing_Module.md)
