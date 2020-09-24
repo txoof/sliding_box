@@ -56,4 +56,4 @@ The customizer uses special comment blocks to help the customizer do its magic.
 * Make a list of the variables you think you will need.
 * Make a list of the modules you think you will need as you complete this project.
 
-[<< Lesson 5 - Writing Your Own Module](./Lesson5_Writing_Module.md) |
+[<< Lesson 5 - Writing Your Own Module](./Lesson5_Writing_Module.md) | [Lesson 7 - Add Mounting Holes >>](./Lesson7_Mounting_Holes.md)
