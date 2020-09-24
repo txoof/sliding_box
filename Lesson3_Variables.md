@@ -80,4 +80,4 @@ In many programming languages variables that start with a Capital Letter are tre
     * Explain to someone else why you got that result.
 
 
-[<< Lesson 2 - Customizing in OpenSCAD](./Lesson2_OpenSCAD.md) | [Lesson 4 - Working With Modules >>](./Lesson4_Modules.scad)
+[<< Lesson 2 - Customizing in OpenSCAD](./Lesson2_OpenSCAD.md) | [Lesson 4 - Working With Modules >>](./Lesson4_Modules.md)
