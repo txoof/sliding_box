@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 This is a set of lessons that will introduce a novice, but experienced OpenSCAD user to modular and parametric design. 
 
 ## Audience:
