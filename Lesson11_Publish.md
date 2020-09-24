@@ -1,4 +1,4 @@
-# Publish to Thingiverse
+# Preparing to Publish to Thingiverse
 ## Objectives:
 * Setup variables for Customizer
 
