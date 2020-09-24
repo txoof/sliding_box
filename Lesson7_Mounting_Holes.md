@@ -35,4 +35,4 @@ You should have code that looks something like this now:
 * Why is this method better than hard-coding in a number for the placement of the holes?
 * How does using a formula or equation help make this thing more customizable?
 
-[<< Lesson 6 - Begin your own Customizable Project](./Lesson6_Customizable_Project.md) |
+[<< Lesson 6 - Begin your own Customizable Project](./Lesson6_Customizable_Project.md) | [Lesson 8 - Add Extruded Text >>](./Lesson8_Add_Text.md)
