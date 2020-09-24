@@ -1,7 +1,8 @@
-# sliding_box
+# Designing a 3D Printable Box in OpenSCAD
 ## Summary
-This is a set of lessons that walks through designing and creating a customizable 3D Printed Box using OpenSCAD. 
-****This can also be viewed on the [Thingiverse](https://www.thingiverse.com/thing:1201466). The Markdown on Thingiverse is broken so is replicated here.****
+This is a set of lessons that walks through designing and creating a customizable 3D Printed Box using OpenSCAD. The attached lessons will introduce you to parametric design and help you build your own customizable box.
+
+****This can also be viewed and customized on the [Thingiverse](https://www.thingiverse.com/thing:1201466). The Markdown on Thingiverse is broken so the documentation is replicated here.****
 
 **Please Note:** Some features have been left incomplete as an exercise for the reader.  For a complete version please see the [original box with sliding lid](http://www.thingiverse.com/thing:201304)
 
@@ -9,6 +10,7 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Identify a Problem](#IDProblem)
 * [Define a Solution](#DefineSolution)
 * [Design Cycle](#DesignCycle)
+* [Lesson 1](./Lesson1.md)
 
 <a name="IDProblem"></a>
 ## Identify A Problem
@@ -26,6 +28,7 @@ The final design must:
 * protect the medication from contamination and abrasion
 
 ### Research Options and Propose Solutions
+The following ideas were researched on Thingiverse for inspiration. 
 * [Bottle with screw on lid](https://www.thingiverse.com/search?q=pill+bottle&type=things&sort=relevant)
 * [Box with snap on lid](https://www.thingiverse.com/search?q=snap+lid&type=things&sort=relevant)
 * [Box with slide lid](https://www.thingiverse.com/search?q=slide+lid&type=things&sort=relevant)
