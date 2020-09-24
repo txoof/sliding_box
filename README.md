@@ -11,8 +11,9 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Define a Solution](#DefineSolution)
 * [Design Cycle](#DesignCycle)
 * [Lesson 0 - Introduction](./Lesson0_introduction.md)
-* [Lesson 1 - Customizer](./Lesson1_Customizer.md)
-* [Lesson 2 - Variables](Lesson2_Variables.md)
+* [Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md)
+* [Lesson 2 - OpenSCAD Customizer](./Lesson2_OpenSCAD.md)
+* [Lesson 3 - Variables](Lesson2_Variables.md)
 * 
 
 <a name="IDProblem"></a>
