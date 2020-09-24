@@ -14,6 +14,7 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md)
 * [Lesson 2 - Customizing in OpenSCAD](./Lesson2_OpenSCAD.md)
 * [Lesson 3 - Variables](Lesson3_Variables.md)
+* [Lesson 4 - Working with modules](./Lesson4_Modules.scad)
 * 
 
 <a name="IDProblem"></a>
