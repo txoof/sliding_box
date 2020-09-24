@@ -64,5 +64,5 @@ The next section is really challenging and will probably take some trial-and-err
 * What do you think the `for` statement does? 
     * Try to explain this to someone else.
 * Try to explain what scope means to someone.
-
-[<< Lesson 4 - Working With Modules](./Lesson4_Modules.scad) | 
+ 
+[<< Lesson 4 - Working With Modules](./Lesson4_Modules.scad) | [Lesson 6 - Begin your own Customizable Project >>](./Lesson6_Customizable_Project.md)
