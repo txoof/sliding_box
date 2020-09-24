@@ -38,4 +38,5 @@ The next step is to download other people's libraries and SCAD projects and play
 If you have any questions or comments for me please don't hesitate to contact me either through the Thingiverse or via email. I am happy to answer questions and would love to fix any mistakes you find.
 
 [<< Lesson 12 - License Your Thing](./Lesson12_License_Thing.md)
+
 [<< Table of Contents](./README.md)
