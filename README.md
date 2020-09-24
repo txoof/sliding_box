@@ -11,7 +11,9 @@ This is a set of lessons that walks through designing and creating a customizabl
 * [Define a Solution](#DefineSolution)
 * [Design Cycle](#DesignCycle)
 * [Lesson 0 - Introduction](./Lesson0_introduction.md)
-* [Lesson 1](./Lesson1.md)
+* [Lesson 1 - Customizer](./Lesson1_Customizer.md)
+* [Lesson 2 - Variables](Lesson2_Variables.md)
+* 
 
 <a name="IDProblem"></a>
 ## Identify A Problem
