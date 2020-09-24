@@ -44,4 +44,4 @@ Think back to the list of variables you made in the previous lessons. What varia
 * What did you need to do to make the text more customizable?
 * What do you think we need to do to join all these pieces together?
 
-[<< Lesson 7 - Add Mounting Holes](./Lesson7_Mounting_Holes.md)
+[<< Lesson 7 - Add Mounting Holes](./Lesson7_Mounting_Holes.md) | [Lesson 9 - Joining it All Together >>](./Lesson9_Joining_Together.md)
