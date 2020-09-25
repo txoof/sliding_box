@@ -1,11 +1,6 @@
 # Designing a 3D Printable Box in OpenSCAD
 ## Summary
-This is a set of lessons that introduces you to designing an object and working with parametric design in OpenSCAD. Through these lessons you will learn:
-  * How to work with variables
-  * Use modules
-  * Write modules
-  * Create a project that is parametric and easily changed
-  * Publish a piece on Thingiverse
+This is a set of lessons that walks through designing and creating a customizable 3D Printed Box using OpenSCAD. The attached lessons will introduce you to parametric design and help you build your own customizable box.
 
 ****This can also be viewed and customized on the [Thingiverse](https://www.thingiverse.com/thing:1201466). The Markdown on Thingiverse is broken so the documentation is replicated here.****
 
@@ -19,7 +14,7 @@ This is a set of lessons that introduces you to designing an object and working 
 * [Lesson 1 - Thingiverse Customizer](./Lesson1_Customizer.md)
 * [Lesson 2 - Customizing in OpenSCAD](./Lesson2_OpenSCAD.md)
 * [Lesson 3 - Variables](Lesson3_Variables.md)
-* [Lesson 4 - Working With Modules](./Lesson4_Modules.scad)
+* [Lesson 4 - Working With Modules](./Lesson4_Modules.md)
 * [Lesson 5 - Writing Your Own Module](./Lesson5_Writing_Module.md)
 * [Lesson 6 - Begin your own Customizable Project](./Lesson6_Customizable_Project.md)
 * [Lesson 7 - Add Mounting Holes](./Lesson7_Mounting_Holes.md)
